@@ -1,11 +1,232 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My GitHub Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Lady Of Mount Carmel - Knights of Columbus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header and Navigation */
+        header {
+            background-color: #003399;
+            color: white;
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            height: 80px;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .logo-section {
+            flex: 0 0 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .logo-placeholder {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 10px;
+            flex: 1;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        nav a.active {
+            background-color: rgba(255, 255, 255, 0.3);
+            border-bottom: 3px solid #FFD700;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .content-section {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .welcome-section {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .welcome-section h1 {
+            color: #003399;
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .welcome-section p {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            border-top: 1px solid #ddd;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello, world! Welcome to my website.</h1>
-    <h1>this is a test</h1>
-    this is a test`
+    <header>
+        <nav>
+            <div class="logo-section">
+                <div class="logo-placeholder">
+                    [Logo]
+                </div>
+            </div>
+            <ul>
+                <li><a href="#" class="nav-btn active" data-tab="home">Home</a></li>
+                <li><a href="#" class="nav-btn" data-tab="who-we-are">Who We Are</a></li>
+                <li><a href="#" class="nav-btn" data-tab="what-we-do">What We Do</a></li>
+                <li><a href="#" class="nav-btn" data-tab="get-involved">Get Involved</a></li>
+                <li><a href="#" class="nav-btn" data-tab="raffle-tickets">Purchase Raffle Tickets</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="content-section active">
+            <div class="welcome-section">
+                <h1>Welcome to Our Lady Of Mount Carmel</h1>
+                <p>Knights of Columbus Council</p>
+                <p>We are a community dedicated to faith, service, and fellowship.</p>
+                <p>Join us in our journey of spiritual growth and community engagement.</p>
+                <p style="margin-top: 30px; font-size: 16px;">We look forward to welcoming you to our community!</p>
+            </div>
+        </section>
+
+        <!-- Who We Are Section -->
+        <section id="who-we-are" class="content-section">
+            <h2>Who We Are</h2>
+            <p>Learn more about our organization and community coming soon...</p>
+        </section>
+
+        <!-- What We Do Section -->
+        <section id="what-we-do" class="content-section">
+            <h2>What We Do</h2>
+            <p>Discover our services and initiatives coming soon...</p>
+        </section>
+
+        <!-- Get Involved Section -->
+        <section id="get-involved" class="content-section">
+            <h2>Get Involved</h2>
+            <p>Learn how you can join our community coming soon...</p>
+        </section>
+
+        <!-- Raffle Tickets Section -->
+        <section id="raffle-tickets" class="content-section">
+            <h2>Purchase Raffle Tickets</h2>
+            <p>Purchase raffle tickets coming soon...</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Our Lady Of Mount Carmel - Knights of Columbus. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Get all navigation buttons and content sections
+        const navButtons = document.querySelectorAll('.nav-btn');
+        const contentSections = document.querySelectorAll('.content-section');
+
+        // Add click event listeners to each navigation button
+        navButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Get the tab name from data attribute
+                const tabName = this.getAttribute('data-tab');
+                
+                // Remove active class from all buttons
+                navButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                // Hide all content sections
+                contentSections.forEach(section => section.classList.remove('active'));
+                
+                // Show the selected content section
+                const activeSection = document.getElementById(tabName);
+                if (activeSection) {
+                    activeSection.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
