@@ -1,0 +1,247 @@
+:root {
+  --primary: #003399;
+  --primary-dark: #002266;
+  --accent: #f4c542;
+  --text: #1d1d1f;
+  --muted: #5f6470;
+  --surface: #f7f7f7;
+  --white: #ffffff;
+  --border: #dddddd;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: #f3f5f9;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+header {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: var(--white);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 80px;
+  padding: 0;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 0;
+}
+
+.logo-section {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex: 1 1 65%;
+  min-width: 0;
+  height: 80px;
+}
+
+.logo-image {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: contain;
+  object-position: left center;
+  border-radius: 0;
+  background: transparent;
+  padding: 0;
+  box-shadow: none;
+  display: block;
+}
+
+.main-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: nowrap;
+  list-style: none;
+  gap: 8px;
+  margin-left: auto;
+  padding: 0 20px 0 12px;
+  white-space: nowrap;
+}
+
+.main-nav li {
+  display: inline-flex;
+}
+
+.main-nav a {
+  color: var(--white);
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  white-space: nowrap;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  background: rgba(255, 255, 255, 0.16);
+  border-bottom: 3px solid var(--accent);
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+}
+
+.page-content {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 40px 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+.hero {
+  text-align: center;
+  padding: 30px 0 10px;
+}
+
+.hero h1 {
+  color: var(--primary);
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  margin-bottom: 12px;
+}
+
+.hero p {
+  font-size: 1.05rem;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+
+.page-heading {
+  color: var(--primary);
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  margin-bottom: 20px;
+}
+
+.page-subtitle {
+  color: var(--muted);
+  font-size: 1.1rem;
+  margin-bottom: 18px;
+}
+
+.content-grid {
+  display: grid;
+  gap: 22px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  margin-top: 28px;
+}
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 1px solid var(--border);
+}
+
+.card-body {
+  padding: 18px;
+}
+
+.card h3 {
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: var(--muted);
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.button-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  border-radius: 999px;
+  background: var(--primary);
+  color: var(--white);
+  font-weight: 700;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.button-link:hover {
+  opacity: 0.94;
+  transform: translateY(-1px);
+}
+
+.secondary-button {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+footer {
+  background: #eeeeee;
+  text-align: center;
+  padding: 20px 16px;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 760px) {
+  .navbar {
+    flex-direction: column;
+    justify-content: center;
+    padding: 18px 16px;
+  }
+
+  .logo-section {
+    justify-content: center;
+    min-width: auto;
+  }
+
+  .main-nav {
+    justify-content: center;
+  }
+
+  .page-content {
+    padding: 28px 18px;
+  }
+}
