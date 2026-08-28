@@ -1,6 +1,0 @@
-<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="200" height="200" rx="24" fill="#003399"/>
-  <circle cx="100" cy="100" r="74" fill="#F4C542" fill-opacity="0.2"/>
-  <path d="M100 34L120 74H142L112 98L122 146L100 120L78 146L88 98L58 74H80L100 34Z" fill="#FFFFFF"/>
-  <text x="100" y="172" text-anchor="middle" font-size="18" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#FFFFFF">KofC</text>
-</svg>
