@@ -1,2 +1,5 @@
-this website will be used for different members of OLOMC Columbus Knights
-there will be lots of uploads
+basic site for OLMC more data to come
+commit one
+commit two
+commit three
+commit four
